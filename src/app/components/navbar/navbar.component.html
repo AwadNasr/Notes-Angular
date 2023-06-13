@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand bg-dark" data-bs-theme="dark">
+    <div class="container">
+    <h2 class="navbar-brand m-0 text-uppercase text-info" >Sticky</h2>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+        <li class="nav-item dropdown">
+          <h3 class="nav-link dropdown-toggle m-0"  id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{menuName}}</h3>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" routerLink="/login" routerLinkActive="text-bg-info" >{{"Login" | translate }}</a>
+            <a class="dropdown-item" routerLink="/register" routerLinkActive="text-bg-info">{{"Register" | translate }}</a>
+          </div>
+        </li>
+
+      </ul>
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="text-info" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item  (click)="changeCurrentLang('en') ">
+          <span>En</span>
+        </button>
+        <button mat-menu-item (click)="changeCurrentLang('ar') ">
+          <span>Ar</span>
+        </button>
+
+      </mat-menu>
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,31 @@
+{
+  "Add Note":"Note اضافة",
+  "Login":"تسجيل الدخول",
+  "login":"تسجيل الدخول",
+  "Logout":"تسجيل الخروج",
+  "Register":"تسجيل",
+  "register":"تسجيل",
+  "FirstName":"الاسم الاول",
+  "LastName":"الاسم الاخير",
+  "Email":"البريد الالكتروني",
+  "Enter your password":"الرقم السري",
+  "Age":"العمر",
+  "Search ...":"... بحث",
+  "Update":"تعديل",
+  "Delete":"مسح",
+  "Update Note":"Note تعديل",
+  "OK":"موافق",
+  "Cancel":"خروج",
+  "R":"ت",
+  "L":"ت",
+  "ogin":"سجيل الدخول",
+  "egister":"سجيل",
+  "is":"",
+  "required":"مطلوب",
+  "password":"الرقم السري",
+  "Title":"العنوان",
+  "Description":"الوصف",
+  "Logged in sucessfully":"تم تسجيل الدخول بنجاح"
+}
+
+

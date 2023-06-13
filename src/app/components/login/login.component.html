@@ -1,0 +1,36 @@
+<section class="d-flex justify-content-center align-items-center">
+  <div class="row g-0 shadow rounded-2 w-100 overflow-hidden ">
+    <div class="col-md-8 d-none d-md-block">
+      <div class="image"></div>
+    </div>
+    <div class="col-md-4 align-self-center">
+      <form class="px-4" [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+        <h2 class="text-center display-2"><span class="text-info">{{ "L" | translate }}</span>{{"ogin" | translate }}</h2>
+        <mat-form-field ppearance="outline" class="w-100">
+          <mat-label>{{"Email" | translate }}</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="Ex. Awad@***.com">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            {{"Email" | translate }} {{"is" | translate }} <strong>{{"required" | translate }}</strong>
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Email is <strong>invalid</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>{{"Enter your password" | translate }}</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            {{"password" | translate }} {{"is" | translate }} <strong>{{"required" | translate }}</strong>
+          </mat-error>
+        </mat-form-field>
+        <button class="btn btn-info w-100" [disabled]="loginForm.invalid">{{"Login" | translate }}</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</section>

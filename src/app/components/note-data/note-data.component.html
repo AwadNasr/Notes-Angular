@@ -1,0 +1,25 @@
+<section class="p-4">
+  <form [formGroup]="noteForm" (ngSubmit)="sendData()">
+    <h3 class="text-info display-4">Note</h3>
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>{{"Title" | translate }}</mat-label>
+      <input matInput placeholder="Ex. Note 1" formControlName="title">
+      <mat-error *ngIf="noteForm.get('title')?.hasError('required')">
+        {{"Title" | translate }} {{"is" | translate }} <strong>{{"required" | translate }}</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>{{"Description" | translate }}</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="desc"></textarea>
+      <mat-error *ngIf="noteForm.get('desc')?.hasError('required')">
+        {{"Description" | translate }} {{"is" | translate }} <strong>{{"required" | translate }}</strong>
+      </mat-error>
+    </mat-form-field>
+    <div class="hstack justify-content-end">
+      <button [disabled]="noteForm.invalid" class="btn btn-info text-white" *ngIf="!data">{{"Add Note" | translate }}</button>
+      <button [disabled]="noteForm.invalid" class="btn btn-info text-white" *ngIf="data">{{"Update Note" | translate }}</button>
+    </div>
+  </form>
+</section>
+

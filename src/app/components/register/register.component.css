@@ -1,0 +1,11 @@
+
+
+section{
+  height: calc(100vh - 70px);
+}
+.image{
+background-image: url(../../../assets/note.jpg);
+background-position: center;
+background-size: cover;
+height: 85vh;
+}
